@@ -1,0 +1,16 @@
+<mat-card class="card  h-100">
+  <mat-card-subtitle>{{blogObj.author}}</mat-card-subtitle>
+  <mat-card-title>{{blogObj.title |summary}}</mat-card-title>
+    <mat-divider inset></mat-divider>
+
+  <mat-card-content>
+    {{blogObj.content}}
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-actions class="text-center" >
+    <button [routerLink]="['/blogs', blogObj.blogid]"
+    mat-button color="primary" class="w-100">Read More...</button>
+  
+  </mat-card-actions>
+ 
+</mat-card>

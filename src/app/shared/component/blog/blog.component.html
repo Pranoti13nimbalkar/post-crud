@@ -1,0 +1,24 @@
+
+
+
+   
+
+<mat-card class="card h-100">
+  <mat-card-title-group>
+     <mat-card-subtitle>{{blogInfo.author | uppercase}}</mat-card-subtitle>
+  <mat-card-title>{{blogInfo.title}}</mat-card-title>
+  
+  </mat-card-title-group>
+   <mat-divider inset></mat-divider>
+  <mat-card-content>
+       {{blogInfo.content}}
+  </mat-card-content>
+    <mat-divider inset></mat-divider>
+<mat-card-actions class="d-flex justify-content-between">
+   <button routerLink="edit"   mat-mini-fab color="primary" ><mat-icon>edit</mat-icon></button>
+   <button mat-mini-fab color="warn" (click)="onRemove()"><mat-icon>delete</mat-icon></button>
+  
+  </mat-card-actions>
+</mat-card>
+
+<button mat-raised-button color="accent" class="mt-3"   routerLink="/blogs">Goto Dashboard</button>

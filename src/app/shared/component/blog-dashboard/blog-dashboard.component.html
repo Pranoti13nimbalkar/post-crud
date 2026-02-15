@@ -1,0 +1,19 @@
+
+
+   <div class="row">
+    <div class="col-12 text-right mb-3">
+        <button routerLink="/blogs/addBlog"  mat-raised-button color="accent" > Add Blog</button>
+    </div>
+   </div>  
+     <div class="row">
+        <ng-container *ngIf="blogArr.length> 0 ; else noBlog">
+        <div  [routerLink]="['blogs.blogid']" class="col-md-4 mb-4"  *ngFor="let blog of blogArr ; trackBy:trackByBlog">
+            <app-blog-card [blogObj]="blog"></app-blog-card>
+        </div>
+        </ng-container>
+
+        <ng-template #noBlog>
+           <p class="alert alert-warning">Please Add blogs!!!</p>
+        </ng-template>
+     </div>
+  
